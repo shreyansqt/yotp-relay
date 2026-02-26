@@ -1,6 +1,6 @@
 # yotp-relay
 
-Self-hostable OTP relay server for [yotp](https://yotp.app) — forwards OTPs from Android to macOS through the cloud.
+Open source OTP relay server for [yotp](https://yotp.app) — forwards OTPs from Android to macOS through the cloud.
 
 Runs as a [Cloudflare Worker](https://workers.cloudflare.com/) with [Ably](https://ably.com/) for real-time messaging.
 
