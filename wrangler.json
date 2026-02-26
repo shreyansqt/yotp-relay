@@ -1,15 +1,15 @@
 {
-  "name": "yotp-relay",
+  "name": "otp-relay-token",
   "main": "src/index.ts",
   "compatibility_date": "2024-01-01",
   "kv_namespaces": [
     {
       "binding": "RATE_LIMIT",
-      "id": "<YOUR_RATE_LIMIT_KV_ID>"
+      "id": "5346bffa91604392802a2e7409e35dd2"
     },
     {
       "binding": "PAIRING",
-      "id": "<YOUR_PAIRING_KV_ID>"
+      "id": "d513ec3072ad4f0d937975b707bc0b65"
     }
   ]
 }
