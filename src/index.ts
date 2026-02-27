@@ -183,8 +183,8 @@ function json(data: object, status: number): Response {
 
 /**
  * Rate limiting using KV.
- * - 20 requests per minute per IP
- * - 10 requests per minute per pairId
+ * - 60 requests per minute per IP
+ * - 30 requests per minute per pairId
  */
 async function checkRateLimit(env: Env, ip: string, pairId: string): Promise<boolean> {
   if (!env.RATE_LIMIT) return false;
@@ -198,7 +198,7 @@ async function checkRateLimit(env: Env, ip: string, pairId: string): Promise<boo
     env.RATE_LIMIT.get(pairKey).then((v) => Number.parseInt(v || '0')),
   ]);
 
-  if (ipCount >= 20 || pairCount >= 10) {
+  if (ipCount >= 60 || pairCount >= 30) {
     return true;
   }
 
